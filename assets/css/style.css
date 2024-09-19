@@ -2,17 +2,6 @@
   #style.css
 \*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
@@ -355,6 +344,39 @@ body.active { overflow: hidden; }
   box-shadow: var(--shadow-1);
   animation: slideIn 0.5s ease-out forwards;
 }
+.header-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-btn {
+  color: var(--btn-color);
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--transition-1);
+  position: relative; 
+}
+
+.cart-btn:hover {
+  color: var(--deep-saffron);
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--cinnabar);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: var(--fw-500);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @keyframes slideIn {
   0% { transform: translateY(0); }
@@ -436,9 +458,12 @@ body.active { overflow: hidden; }
   visibility: visible;
 }
 
-.navbar-list { margin-block: 10px; }
 
-.nav-item:not(:last-child) { border-block-end: 1px solid hsla(0, 0%, 0%, 0.04); }
+.nav-item:not(:last-child) { 
+  border-block-end: 1px solid hsla(0, 0%, 0%, 0.04);
+  margin-block-end: 5px;
+  padding-block-end: 5px; 
+}
 
 .navbar-link {
   color: var(--rich-black-fogra-29);
@@ -545,7 +570,6 @@ body.active { overflow: hidden; }
 
 .hero-title {
   color: var(--champagne-pink);
-  max-width: 12ch;
   margin-inline: auto;
 }
 
