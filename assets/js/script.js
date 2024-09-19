@@ -118,3 +118,29 @@ for (let i = 0; i < filterBtns.length; i++) {
     }
   });
 }
+
+
+
+/**
+ * cart functionality
+ */
+
+const cartBtn = document.querySelector("[data-cart-btn]");
+const cartCount = document.querySelector("[data-cart-count]");
+
+let cartItemCount = 0;
+
+function updateCartCount() {
+  cartCount.textContent = cartItemCount;
+}
+
+document.querySelectorAll(".food-menu-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    cartItemCount++;
+    updateCartCount();
+  });
+});
+
+cartBtn.addEventListener("click", () => {
+  alert(`You have ${cartItemCount} item(s) in your cart.`);
+});
